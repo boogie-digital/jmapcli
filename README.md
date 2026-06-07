@@ -1,0 +1,67 @@
+# jmapcli
+
+**JMAP from the command line.** A fast, native macOS command-line client for [JMAP](https://jmap.io) and [Stalwart Mail Server](https://stalw.art) — send, read, search, sync and manage your mail straight from the terminal.
+
+By [Boogie](https://boogie.digital) · made by KTP Digital.
+
+➡️ **Website & docs: https://boogie.digital/cli/**
+
+## Install
+
+```sh
+brew tap jasonhollis/boogie
+brew install jmapcli
+```
+
+Upgrade later:
+
+```sh
+brew upgrade jmapcli
+```
+
+Or a one-off install without adding the tap:
+
+```sh
+brew install https://boogie.digital/cli/jmapcli.rb
+```
+
+## Quick start
+
+```sh
+jmapcli login                                   # store JMAP credentials in the macOS Keychain
+jmapcli mailboxes                               # list your mailboxes
+jmapcli list                                    # list the inbox
+jmapcli read <id>                               # read a message
+jmapcli send --to you@example.com \
+             --subject "Hi" --body "Sent from the CLI"
+```
+
+Everything is a subcommand — `send`, `list`, `read`, `mailboxes`, `move`, `trash`, `delete`, `alias`, … Run `jmapcli --help` or `jmapcli <command> --help` for the full set.
+
+## What it is
+
+- **Native** — a compiled Swift binary, not a script. Instant startup, no runtime to install.
+- **Signed & notarised** — Developer-ID signed and notarised by KTP Digital, so macOS trusts it out of the box.
+- **Standards-based** — speaks JMAP ([RFC 8620](https://www.rfc-editor.org/rfc/rfc8620) / [RFC 8621](https://www.rfc-editor.org/rfc/rfc8621)). Works with any JMAP server — e.g. Stalwart, Fastmail, Cyrus.
+- **Private** — credentials live in the macOS Keychain. No account, no telemetry.
+- **Free.**
+
+jmapcli is the command-line companion to **Boogie**, the native JMAP email + calendar app for macOS, iOS, iPadOS and watchOS.
+
+## Platform
+
+macOS (Apple silicon).
+
+## Source & issues
+
+jmapcli ships as a closed-source, signed binary. This repository hosts the **documentation and issue tracker** — please file bug reports and feature requests here.
+
+## Links
+
+- Website / docs — https://boogie.digital/cli/
+- Homebrew tap — https://github.com/jasonhollis/homebrew-boogie
+- Boogie app — https://boogie.digital
+
+---
+
+© KTP Digital Pty Ltd · ABN 85 648 755 980
