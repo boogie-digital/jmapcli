@@ -28,13 +28,15 @@ brew install https://boogie.digital/cli/jmapcli.rb
 ## Quick start
 
 ```sh
-jmapcli login                                   # store JMAP credentials in the macOS Keychain
+jmapcli login --url https://api.fastmail.com --username YOU@fastmail.com --oauth
 jmapcli mailboxes                               # list your mailboxes
 jmapcli list                                    # list the inbox
 jmapcli read <id>                               # read a message
 jmapcli send --to you@example.com \
              --subject "Hi" --body "Sent from the CLI"
 ```
+
+`login --oauth` opens a browser (RFC 8252 loopback PKCE + RFC 7591 dynamic client registration) and stores access + refresh in the macOS Keychain (`jmap-oauth`). App-password (`--password`) and paste-token (`--token`) login still work. 1.5.0 is the first release with `--oauth`.
 
 Everything is a subcommand — `send`, `list`, `read`, `mailboxes`, `move`, `trash`, `delete`, `alias`, … Run `jmapcli --help` or `jmapcli <command> --help` for the full set.
 
