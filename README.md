@@ -9,21 +9,16 @@ By [Boogie](https://boogie.digital) · made by KTP Digital.
 ## Install
 
 ```sh
-brew tap jasonhollis/boogie
-brew install jmapcli
+brew install boogie-digital/boogie/jmapcli
 ```
 
 Upgrade later:
 
 ```sh
-brew upgrade jmapcli
+brew upgrade boogie-digital/boogie/jmapcli
 ```
 
-Or a one-off install without adding the tap:
-
-```sh
-brew install https://boogie.digital/cli/jmapcli.rb
-```
+Each release is also listed under [Releases](https://github.com/boogie-digital/jmapcli/releases) with the signed tarball and its `sha256`; the formula lives in the tap [`boogie-digital/homebrew-boogie`](https://github.com/boogie-digital/homebrew-boogie). This is the only publication path; the older `jasonhollis/boogie` tap is legacy (`brew untap jasonhollis/boogie`).
 
 ## Quick start
 
@@ -61,7 +56,8 @@ jmapcli ships as a closed-source, signed binary. This repository hosts the **doc
 ## Links
 
 - Website / docs — https://boogie.digital/cli/
-- Homebrew tap — https://github.com/jasonhollis/homebrew-boogie
+- Homebrew tap — https://github.com/boogie-digital/homebrew-boogie
+- Releases — https://github.com/boogie-digital/jmapcli/releases
 - Boogie app — https://boogie.digital
 
 ---
